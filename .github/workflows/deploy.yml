@@ -29,11 +29,14 @@ jobs:
       - name: Verify staging artifact
         run: |
           test -f index.html
-          test ! -f CNAME
+          test -f CNAME
+          grep -qx 'staging.croner.dev' CNAME
           test ! -f sitemap.xml
           grep -q 'noindex, nofollow' index.html
           grep -q 'Disallow: /' robots.txt
-          grep -q '/croner-dev-staging/assets/' index.html
+          grep -q 'src="/assets/' index.html
+          grep -q 'href="/assets/' index.html
+          ! grep -q '/croner-dev-staging/assets/' index.html
 
       - name: Prepare static artifact
         run: |

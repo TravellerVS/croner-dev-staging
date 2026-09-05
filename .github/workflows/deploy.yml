@@ -37,6 +37,8 @@ jobs:
           grep -q 'src="/assets/' index.html
           grep -q 'href="/assets/' index.html
           ! grep -q '/croner-dev-staging/assets/' index.html
+          grep -Rqs 'https://api-staging.croner.dev' assets
+          ! grep -Rqs 'https://vander-spring-cron-api-staging.onrender.com' assets
 
       - name: Prepare static artifact
         run: |

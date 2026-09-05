@@ -3,10 +3,10 @@
 Public GitHub Pages staging artifact for [Croner](https://croner.dev).
 
 - Frontend: <https://staging.croner.dev/>
-- API: <https://vander-spring-cron-api-staging.onrender.com>
-- API custom domain: <https://api-staging.croner.dev/>
+- API: <https://api-staging.croner.dev/>
+- Render origin: <https://vander-spring-cron-api-staging.onrender.com>
 - Source branch: private `TravellerVS/vander-engineering-website` `develop`
-- Source commit: `68b5dc30f3efc15bb791f94c57e97add7260cd4e`
+- Source commit: `637fd272e9e8744298e62a30d4b589b35060d736`
 
 This environment is stateless, uses no database, is visibly marked **Staging**,
 and is blocked from search indexing. Generated files in this repository should
